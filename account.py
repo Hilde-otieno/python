@@ -15,7 +15,7 @@ class Account:
         if pin == self.__pin:
             return self.__balance
         else:
-            return "Wrong pin"
+             "Wrong pin"
         Balance
 
     def show_balance(self, pin):
@@ -53,7 +53,7 @@ class Account:
         self.transactions.append({
             "type": "Deposit",
             "amount": amount,
-            "date": datetime.datetime.now()
+            "date": date.date.now()
         })
         return "Deposit successful"
 
@@ -66,7 +66,7 @@ class Account:
                 self.transactions.append({
                     "type": "Withdrawal",
                     "amount": amount,
-                    "date": datetime.datetime.now()
+                    "date": date.date.now()
                 })
                 return "Withdrawal successful"
             else:
@@ -86,14 +86,14 @@ class Account:
         else:
             return "Wrong pin"
 
-    def set_overdraft_limit(self, pin, limit):
+    def overdraft_limit(self, pin, limit):
         if pin == self.__pin:
             self.__overdraft_limit = limit
             return "Overdraft limit set successfully"
         else:
             return "Wrong pin"
 
-    def set_interest_rate(self, pin, rate):
+    def interest_rate(self, pin, rate):
         if pin == self.__pin:
             self.__interest_rate = rate
             return "Interest rate set successfully"
@@ -114,7 +114,7 @@ class Account:
             self.transactions.append({
                 "type": "Interest",
                 "amount": interest,
-                "date": datetime.datetime.now()
+                "date": date.date.now()
             })
             return "Interest applied successfully"
         else:
@@ -140,7 +140,7 @@ class Account:
         else:
             return "Wrong pin"
 
-    def set_minimum_balance(self, pin, minimum_balance):
+    def min_balance(self, pin, minimum_balance):
         if pin == self.__pin:
             self.__minimum_balance = minimum_balance
             return f"Minimum balance set to {minimum_balance}"
